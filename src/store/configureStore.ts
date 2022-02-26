@@ -10,9 +10,7 @@ import { rootReducer, RootState } from "./reducers";
  * @see https://redux-toolkit.js.org/usage/usage-with-typescript#correct-typings-for-the-dispatch-type
  */
 
-const store = configureStore({
+export const store = configureStore({
   reducer: rootReducer,
   devTools: Env.NODE_ENV === "development",
 });
-
-export default store;
