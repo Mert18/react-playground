@@ -1,12 +1,12 @@
 import { combineReducers } from "redux";
-import { userReducer } from "./user";
+import postsReducer from "./posts/postsSlice";
 
 /**
  * Combine reducers
  * @see https://redux-toolkit.js.org/usage/usage-with-typescript
  */
 export const rootReducer = combineReducers({
-  user: userReducer,
+  posts: postsReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
