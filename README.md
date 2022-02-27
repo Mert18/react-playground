@@ -1,1 +1,9 @@
-# React Playground, check branches.
+# React Playground
+
+```
+npm i
+```
+
+```
+npm start
+```
