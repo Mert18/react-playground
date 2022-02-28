@@ -3,12 +3,12 @@ import { useDispatch } from "react-redux";
 import { getPosts } from "./store/posts/postsSlice";
 
 /* gRPC */
-import { User, JoinResponse } from "./protos/chat_pb";
-import { ChatServiceClient } from "./protos/chat_grpc_web_pb";
+import { User, JoinResponse } from "./api/chat/chat_pb";
+import { ChatServiceClient } from "./api/chat/chat_grpc_web_pb";
 import ChatPage from "./containers/Chat";
 import { useState, useRef } from "react";
 
-const client = new ChatServiceClient("http://localhost:8080", null, null);
+const client = new ChatServiceClient("http://localhost:8080");
 
 const App = () => {
   /* redux testing */
@@ -85,7 +85,7 @@ const App = () => {
         You are in master branch. Folder structure and redux implementation lies
         here.
       </p>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center mb-14">
         <p>
           Open Redux DevTools and click the button to test redux async logic.
         </p>
